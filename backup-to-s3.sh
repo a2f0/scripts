@@ -21,6 +21,19 @@ echo "To S3 Bucket: $2"
 echo "Prefix: $3"
 
 cd /tmp
-tar -czf $FILE_NAME.tar.gz $1
+tar -czf $FILE_NAME $1
+
+echo "$FILE_NAME" > /tmp/$MOST_RECENT
+aws s3 cp /tmp/$MOST_RECENT s3://$2/$MOST_RECENT
+aws s3 cp /tmp/$FILE_NAME s3://$2/$FILE_NAME
+
+echo "$FILE_NAME from S3:"
+aws s3 ls s3://$2/$FILE_NAME 
+
+echo "$MOST_RECENT from S3:"
+aws s3 ls s3://$2/$MOST_RECENT
+
+echo "$MOST_RECENT contents:"
+aws s3 cp s3://$2/$MOST_RECENT -
 
 cd $CWD; unset CWD
