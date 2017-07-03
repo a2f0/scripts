@@ -36,4 +36,7 @@ aws s3 ls s3://$2/$MOST_RECENT
 echo "$MOST_RECENT contents:"
 aws s3 cp s3://$2/$MOST_RECENT -
 
+rm -rf /tmp/$FILE_NAME
+rm -rf /tmp/$MOST_RECENT
+
 cd $CWD; unset CWD
