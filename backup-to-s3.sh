@@ -7,8 +7,14 @@ if [[ $# -lt 3 ]]; then
 elif [ ! -e ~/.aws/credentials ]; then
   echo "~/.aws/credentials not set, exiting"
   exit 1
-elif [ ! hash aws 2>/dev/null; then
+elif [ ! hash aws 2>/dev/null ]; then
   echo "aws cli tools not installed, exiting"
+  exit 1
+elif [ ! -d "$1" ]; then
+  echo "directory $1 does not exist, exiting"
+  exit 1
+elif [ ! "$(ls -A $1)"  ]; then
+  echo "directory empty, not backing up. exiting."
   exit 1
 fi
 
