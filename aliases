@@ -1,0 +1,4 @@
+#this file should be sourced using source /opt/code/scripts/aliases
+backup-devopsrockstars-paperclip="/opt/code/scripts/backup-to-s3.sh /opt/code/devopsrockstars.com/public/paperclip devopsrockstars-web-backup devopsrockstars-paperclip-production"
+backup-devopsrockstars-paperclip-rose="/opt/code/scripts/backup-to-s3.sh /opt/code/devopsrockstars-website/public/paperclip devopsrockstars-web-backup devopsrockstars-paperclip-production"
+restore-devopsrockstars-paperclip="/opt/code/scripts/backup-to-s3.sh /opt/code/devopsrockstars.com/public devopsrockstars-web-backup devopsrockstars-paperclip-production 4"
