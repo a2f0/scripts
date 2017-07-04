@@ -9,4 +9,4 @@ elif [ ! -e /usr/local/bin/certbot-auto ]; then
   exit 1
 fi
 
-/usr/local/bin/certbot-auto certonly -n --webroot -w $1 -d $2 -d $3 --logs-dir=/opt/certbot/logs --config-dir=/opt/certbot/config --work-dir=/opt/certbot/work --email=webmaster@devopsrockstars.com --agree-tos --expand --hsts --post-hook 'apachectl restart' --debug
+/usr/local/bin/certbot-auto certonly --no-bootstrap -n --webroot -w $1 -d $2 -d $3 --logs-dir=/opt/certbot/logs --config-dir=/opt/certbot/config --work-dir=/opt/certbot/work --email=webmaster@devopsrockstars.com --agree-tos --expand --hsts --post-hook 'apachectl restart' --debug
