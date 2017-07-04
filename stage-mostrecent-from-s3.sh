@@ -20,4 +20,7 @@ aws s3 cp s3://$1/$MOST_RECENT /tmp/$MOST_RECENT
 TO_STAGE=`cat /tmp/$MOST_RECENT`
 aws s3 cp s3://$1/$TO_STAGE /tmp/$2-staged
 
+echo "staged file:"
+ls -l /tmp/$2-staged
+
 cd $CWD; unset CWD
