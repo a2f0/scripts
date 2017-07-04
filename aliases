@@ -1,6 +1,6 @@
 #this file should be sourced using source /opt/code/scripts/aliases
-backup-devopsrockstars-paperclip="/opt/code/scripts/backup-to-s3.sh /opt/code/devopsrockstars.com/public/paperclip devopsrockstars-web-backup devopsrockstars-paperclip-production"
-backup-devopsrockstars-paperclip-rose="/opt/code/scripts/backup-to-s3.sh /opt/code/devopsrockstars-website/public/paperclip devopsrockstars-web-backup devopsrockstars-paperclip-production"
-backup-certbot="/opt/code/scripts/backup-to-s3.sh /opt/certbot devopsrockstars-web-backup devopsrockstars-certbot"
-restore-devopsrockstars-paperclip="/opt/code/scripts/backup-to-s3.sh /opt/code/devopsrockstars.com/public devopsrockstars-web-backup devopsrockstars-paperclip-production 4"
-restore-certbot="/opt/code/scripts/restore-from-s3.sh /opt/ devopsrockstars-web-backup devopsrockstars-certbot 1"
+alias backup-devopsrockstars-paperclip="/opt/code/scripts/backup-to-s3.sh /opt/code/devopsrockstars.com/public/paperclip devopsrockstars-web-backup devopsrockstars-paperclip-production"
+alias backup-devopsrockstars-paperclip-rose="/opt/code/scripts/backup-to-s3.sh /opt/code/devopsrockstars-website/public/paperclip devopsrockstars-web-backup devopsrockstars-paperclip-production"
+alias backup-certbot="/opt/code/scripts/backup-to-s3.sh /opt/certbot devopsrockstars-web-backup devopsrockstars-certbot"
+alias restore-devopsrockstars-paperclip="/opt/code/scripts/backup-to-s3.sh /opt/code/devopsrockstars.com/public devopsrockstars-web-backup devopsrockstars-paperclip-production 4"
+alias restore-certbot="/opt/code/scripts/restore-from-s3.sh /opt/ devopsrockstars-web-backup devopsrockstars-certbot 1"
